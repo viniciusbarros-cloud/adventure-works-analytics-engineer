@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: adventure_works
+    database: ADVENTURE_WORKS
+    schema: ADVENTURE_WORKS
+    tables:
+      # Vendas e Fato
+      - name: sales_salesorderheader
+      - name: sales_salesorderdetail
+      
+      # Clientes
+      - name: sales_customer
+      - name: person_person
+      
+      # Produtos
+      - name: production_product
+      - name: production_productsubcategory
+      - name: production_productcategory
+      
+      # Localização
+      - name: person_address
+      - name: person_stateprovince
+      - name: person_countryregion
+      
+      # Cartão de Crédito e Motivo
+      - name: sales_creditcard
+      - name: sales_salesreason
+      - name: sales_salesorderheadersalesreason
