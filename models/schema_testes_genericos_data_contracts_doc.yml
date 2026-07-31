@@ -1,0 +1,112 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: '{{ doc("fct_sales_description") }}'
+    config:
+      contract:
+        enforced: true
+
+    columns:
+      - name: sales_order_detail_id
+        description: "Chave primária do item do pedido."
+        data_type: integer
+        constraints:
+          - type: not_null
+        data_tests:
+          - unique
+          - not_null
+
+      - name: sales_order_id
+        description: "Identificador do cabeçalho do pedido."
+        data_type: integer
+
+      - name: sk_customer
+        description: "Surrogate Key do cliente."
+        data_type: string
+        constraints:
+          - type: not_null
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customer')
+                field: sk_customer
+
+      - name: sk_product
+        description: "Surrogate Key do produto."
+        data_type: string
+        constraints:
+          - type: not_null
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_product')
+                field: sk_product
+
+      - name: sk_location
+        description: "Surrogate Key do endereço de entrega."
+        data_type: string
+
+      - name: sk_credit_card
+        description: "Surrogate Key do cartão de crédito."
+        data_type: string
+
+      - name: date_id
+        description: "Chave numérica da data da venda no formato YYYYMMDD."
+        data_type: integer
+
+      - name: order_date
+        description: "Data em que o pedido foi realizado."
+        data_type: date
+        data_tests:
+          - not_null
+
+      - name: due_date
+        description: "Data de vencimento da fatura."
+        data_type: date
+
+      - name: ship_date
+        description: "Data em que o pedido foi enviado."
+        data_type: date
+
+      - name: status
+        description: "Código do status do pedido."
+        data_type: integer
+
+      - name: is_online_order
+        description: "Indica se o pedido foi realizado online."
+        data_type: boolean
+
+      - name: order_qty
+        description: "Quantidade de unidades vendidas."
+        data_type: integer
+
+      - name: unit_price
+        description: "Preço unitário original do produto."
+        data_type: numeric(18,4)
+
+      - name: unit_price_discount
+        description: "Percentual de desconto aplicado."
+        data_type: numeric(18,4)
+
+      - name: gross_amount
+        description: '{{ doc("gross_vs_net_sales") }}'
+        data_type: numeric(18,4)
+
+      - name: line_total
+        description: "Valor total líquido da linha do pedido."
+        data_type: numeric(18,4)
+
+      - name: tax_amount
+        description: "Valor total do imposto rateado."
+        data_type: numeric(18,4)
+
+      - name: freight
+        description: "Valor do frete."
+        data_type: numeric(18,4)
+
+      - name: total_due
+        description: "Valor total devido do pedido."
+        data_type: numeric(18,4)

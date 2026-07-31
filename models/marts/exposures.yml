@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+  - name: ceo_sales_dashboard
+    label: "Dashboard Executivo de Vendas (CEO)"
+    type: dashboard
+    maturity: high
+    url: https://app.powerbi.com/ # Colocar a URL do projeto de Power BI publicado online.
+    description: "Dashboard estratégico acompanhado semanalmente pela diretoria para análise de faturamento bruto e volume de pedidos."
+    
+    depends_on:
+      - ref('fct_sales')
+      - ref('dim_customer')
+      - ref('dim_product')
+
+    owner:
+      name: Vinicius
+      email: vini@empresa.com
