@@ -19,19 +19,19 @@ with source as (
                creditcardid as credit_card_id,
                currencyrateid as currency_rate_id,
                -- Datas
-               orderdate as order_date,
-               duedate as due_date,
-               shipdate as ship_date,
+               cast(orderdate as date) as order_date,
+               cast(duedate as date) as due_date,
+               cast(shipdate as date) as ship_date,
 
               --Valores e Status
                status,
                revisionnumber as revision_number,
-               onlineorderflag as online_order_flag ,
+               onlineorderflag as is_online_order ,
                purchaseordernumber as purchase_order_number,
                accountnumber as account_number,
                creditcardapprovalcode as credit_card_approval_code,
                subtotal,
-               taxamt as taxa_amount,
+               taxamt as tax_amount,
                freight,
                totaldue as total_due,
                comment
