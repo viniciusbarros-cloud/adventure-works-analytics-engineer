@@ -9,8 +9,8 @@ final as (
         
         product_id,
         product_name,
-        subcategory_name,
-        category_name
+        coalesce(category_name, 'N/A') as category_name,
+        coalesce(subcategory_name,'N/A') as subcategory_name
     from int_product
 )
 
