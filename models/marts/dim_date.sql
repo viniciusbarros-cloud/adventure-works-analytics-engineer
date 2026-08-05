@@ -12,7 +12,12 @@ final as (
         extract(month from date_day) as month,
         extract(year from date_day) as year,
         extract(quarter from date_day) as quarter,
-        extract(dayofweek from date_day) as day_of_week
+        extract(dayofweek from date_day) as day_of_week,
+        
+        -- Novas colunas para o eixo do gráfico no Power BI:
+        cast(to_char(date_day, 'YYYYMM') as integer) as year_month_id,
+        to_char(date_day, 'MON/YYYY') as year_month_display
+        
     from date_spine
     where date_day <= '2025-12-31'::date
 )
