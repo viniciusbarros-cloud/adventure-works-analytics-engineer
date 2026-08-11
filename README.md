@@ -6,7 +6,7 @@
 Desenvolver um Data Warehouse moderno utilizando o Snowflake para consolidar os dados de vendas da Adventure Works, uma indústria em expansão com mais de 500 produtos distintos, 20.000 clientes e 31.000 pedidos. O objetivo principal é viabilizar relatórios analíticos estratégicos e transformar a empresa em uma organização guiada por dados (*data-driven*).
 
 ### Especificações
-*   **Fontes de Dados:** Dados mapeados e extraídos dos sistemas legados / Databricks.
+*   **Fontes de Dados:** Dados mapeados e extraídos dos registros do Databricks.
 *   **Qualidade dos Dados:** Implementação de testes genéricos (como verificação de chaves primárias únicas e não nulas) e testes singulares (regras de negócio customizadas) via dbt para garantir a integridade dos dados antes da camada analítica.
 *   **Integração:** Consolidação das fontes em um modelo de dados amigável e otimizado para consultas analíticas utilizando a modelagem Star Schema (Tabelas Fato e Dimensão).
 *   **Arquitetura:** Arquitetura Medalhão (*Medallion Architecture*) dividida nas camadas Bronze (Staging), Silver (Intermediate) e Gold (Marts).
