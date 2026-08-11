@@ -1,6 +1,6 @@
 # 🚀 Projeto de Data Warehouse & BI: Adventure Works
 
-## 1. Construção do Data Warehouse (Engenharia de Dados)
+## 1. Construção do Data Warehouse (Engenharia de Analytics)
 
 ### Objetivo
 Desenvolver um Data Warehouse moderno utilizando o Snowflake para consolidar os dados de vendas da Adventure Works, uma indústria em expansão com mais de 500 produtos distintos, 20.000 clientes e 31.000 pedidos. O objetivo principal é viabilizar relatórios analíticos estratégicos e transformar a empresa em uma organização guiada por dados (*data-driven*).
