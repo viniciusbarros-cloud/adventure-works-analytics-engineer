@@ -20,25 +20,19 @@ Desenvolver um Data Warehouse moderno utilizando o Snowflake para consolidar os 
 ## 2. BI: Análise e Relatórios (Análise de Dados)
 
 ### Objetivo
-Desenvolver dashboards analíticos e interativos no Power BI para fornecer *insights* detalhados sobre o desempenho do negócio. A estrutura dos relatórios atende diretamente às perguntas estratégicas da diretoria, organizadas por página conforme a ordem de apresentação:
+Desenvolver um dashboard executivo e interativo no Power BI para fornecer *insights* detalhados sobre o desempenho do negócio. A estrutura do relatório deverá atender às seguintes perguntas estratégicas da diretoria:
 
-1. **Página 1 - Visão Geral do Negócio (Item e):**
-   * Análise temporal da evolução do **Número de Pedidos**, **Quantidade Comprada** e **Valor Total Negociado** mês a mês e ano a ano via gráfico de série de tempo.
+1. Qual o número de pedidos, quantidade comprada, valor total negociado por mês e ano ?
 
-2. **Página 2 - Análise de Produtos e Clientes (Item b):**
-   * Identificação dos produtos com **maior Ticket Médio** por mês, ano, cidade, estado e país ($\text{Ticket Médio} = \frac{\text{Faturamento Bruto} - \text{Descontos}}{\text{Número de Pedidos}}$).
+2. Quais os produtos com maior ticket médio por mês, ano, cidade, estado e país? 
 
-3. **Página 2 - Análise de Produtos e Clientes (Item c):**
-   * Ranking dos **10 melhores clientes** por valor total negociado, com capacidade de filtragem por produto, tipo de cartão, motivo de venda, data, status, cidade, estado e país.
+3. Quais os 10 melhores clientes por valor total negociado filtrado por produto, tipo de cartão, motivo de venda, data de venda, status, cidade, estado e país?
 
-4. **Página 2 - Análise de Produtos e Clientes (Item f):**
-   * Destaque do produto com a **maior quantidade de unidades compradas** associado especificamente ao motivo de venda *"Promotion"*.
+4. Qual produto tem a maior quantidade de unidades compradas para o motivo de venda “Promotion”?
 
-5. **Página 3 - Análise Geográfica (Item d):**
-   * Ranking das **5 melhores cidades** em valor total negociado, com visões dinâmicas por produto, tipo de cartão, motivo de venda, data, cliente, status, cidade, estado e país.
+5. Quais as 5 melhores cidades em valor total negociado por produto, tipo de cartão, motivo de venda, data de venda, cliente, status, cidade, estado e país?
 
-6. **Página 4 - Detalhamento de Vendas (Item a):**
-   * Tabela analítica completa detalhando o **Número de Pedidos**, **Quantidade Comprada** e **Valor Total Negociado** cruzando todas as 9 dimensões de negócio (produto, tipo de cartão, motivo de venda, data de venda, cliente, status, cidade, estado e país).
+6. Qual o número de pedidos, quantidade comprada, valor total negociado por produto, tipo de cartão, motivo de venda, data de venda, cliente, status, cidade, estado e país?
 
 ---
 
