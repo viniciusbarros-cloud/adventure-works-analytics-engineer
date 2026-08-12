@@ -6,7 +6,7 @@
 Desenvolver um Data Warehouse moderno utilizando o Snowflake para consolidar os dados de vendas da Adventure Works, uma indústria em expansão com mais de 500 produtos distintos, 20.000 clientes e 31.000 pedidos. O objetivo principal é viabilizar relatórios analíticos estratégicos e transformar a empresa em uma organização guiada por dados (*data-driven*).
 
 ### Especificações
-*  **Fontes e Modelagem**: Unificar as bases no Snowflake, organizando a arquitetura em 3 camadas e modelando em Star Schema.
+*  **Fontes e Modelagem**: Unificar as bases no Snowflake, construir um Data Warehouse moderno em 3 camadas com modelagem de dados em Star Schema.
 
 * **Qualidade e Governança**: Garantir a integridade dos dados através de testes automatizados no dbt e controle de acessos via DCL e DDL.
 
