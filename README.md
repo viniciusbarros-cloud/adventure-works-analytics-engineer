@@ -33,13 +33,13 @@ A arquitetura do projeto segue o padrão do *Modern Data Stack*.
 Os dados brutos são extraídos do banco transacional da empresa e carregados no ambiente de nuvem. 
 A partir daí, o fluxo de transformação é dividido em camadas (Arquitetura Medalhão).
 
-![Arquitetura do Projeto](img/conceptual_model.drawio.png)
-
 Nesta arquitetura, temos 03 camadas: 
 
 * A camada inicial (*Staging/Bronze*) apenas espelha os dados da fonte de forma bruta.
 * A camada intermediária (*Silver*) aplica regras de limpeza e padronização.
 * A camada final (*Gold/Marts*) consolida a modelagem dimensional em esquema estrela (*Star Schema*).
+
+  ![Arquitetura do Projeto](img/conceptual_model.drawio.png)
   
 Todo esse processo de transformação, documentação e testes é governado unicamente pelo dbt.
 Por fim, os dados tratados são conectados à ferramenta de BI para o consumo final.
