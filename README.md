@@ -6,14 +6,13 @@
 Desenvolver um Data Warehouse moderno utilizando o Snowflake para consolidar os dados de vendas da Adventure Works, uma indústria em expansão com mais de 500 produtos distintos, 20.000 clientes e 31.000 pedidos. O objetivo principal é viabilizar relatórios analíticos estratégicos e transformar a empresa em uma organização guiada por dados (*data-driven*).
 
 ### Especificações
-*   **Fontes de Dados:** Dados mapeados e extraídos dos registros do Databricks.
-*   **Qualidade dos Dados:** Implementação de testes genéricos (como verificação de chaves primárias únicas e não nulas) e testes singulares (regras de negócio customizadas) via dbt para garantir a integridade dos dados antes da camada analítica.
-*   **Integração:** Consolidação das fontes em um modelo de dados amigável e otimizado para consultas analíticas utilizando a modelagem Star Schema (Tabelas Fato e Dimensão).
-*   **Arquitetura:** Arquitetura Medalhão (*Medallion Architecture*) dividida nas camadas Bronze (Staging), Silver (Intermediate) e Gold (Marts).
-*   **Transformações Avançadas:** Implementação de *Slowly Changing Dimensions* (SCD), *Snapshots* e Materialização Incremental via dbt para otimização de custo e performance.
-*   **Segurança e Governança:** Aplicação de comandos DCL (*Data Control Language*) para gestão de acessos e permissões por perfil de usuário, e DDL (*Data Definition Language*) para estruturação dos esquemas no Snowflake.
-*   **Documentação e Versionamento:** Documentação detalhada dos modelos utilizando `dbt docs` e controle de versão de todo o código no GitHub.
-*   **Orquestração:** Automação e agendamento da execução do pipeline para garantir o frescor constante dos dados.
+*  **Fontes e Modelagem**: Unificar as bases no Snowflake, organizando a arquitetura em 3 camadas e modelando em Star Schema.
+
+* **Qualidade e Governança**: Garantir a integridade dos dados através de testes automatizados no dbt e controle de acessos via DCL e DDL.
+
+* **Transformações Avançadas**: Implementar historização de dados com SCD e Snapshots, além de materialização incremental para performance.
+
+* **Documentação e Orquestração**: Gerar a documentação com o dbt docs, promover o versionamento no GitHub e automatizar a execução do pipeline.
 
 ---
 
