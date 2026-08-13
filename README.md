@@ -80,6 +80,7 @@ O repositório foi organizado para manter a clareza do projeto dbt e armazenar o
 ```text
 📦 adventure-works-analytics
  ┣ 📂 analyses/             # Consultas SQL e análises exploratórias
+ ┣ 📂 dashboard/            # Dashboard do projeto em Power BI e background gerado no figma
  ┣ 📂 img/                  # Imagens e GIFs utilizados na documentação (Arquitetura e Dashboard)
  ┣ 📂 macros/               # Macros customizadas em SQL/Jinja
  ┣ 📂 models/               # Modelos de transformação de dados (Bronze, Silver e Gold)
